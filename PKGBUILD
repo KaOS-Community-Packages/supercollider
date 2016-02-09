@@ -5,13 +5,13 @@ pkgdesc="An environment and programming language for real time audio synthesis a
 url="http://supercollider.sourceforge.net/"
 arch=('x86_64')
 license=('GPL3')
+install="$pkgname.install"
 depends=('jack' 'fftw' 'qtwebkit' 'libsndfile')
 makedepends=('cmake' 'libsndfile' 'ruby' 'vim' 'emacs' 'boost' 'avahi' 'qt5-base' 'qt5-tools' 'qt5-webkit' 'qt5-location' 'qt5-sensors')
 source=("${pkgname}::git+https://github.com/supercollider/supercollider.git#branch=3.7"
         "libatomic.patch")
 md5sums=('SKIP'
          '2956e6172cafcc9a38bdfdd2bc33e87b')
-install="$pkgname.install"
 
 prepare() {
   cd $srcdir/$pkgname
